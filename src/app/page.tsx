@@ -255,6 +255,9 @@ export default function Home() {
             <a href="https://mail.google.com/mail/?view=cm&to=mayyiko202@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
               <Mail size={23} />
             </a>
+            <a href="/cv.pdf" download>
+            cv form <Download size={15} />
+          </a>
           </div>
           {/* <a className="scroll-indicator" href="#about"><span/> SCROLL TO EXPLORE <ArrowDown size={13}/></a> */}
         </div>
@@ -593,9 +596,7 @@ export default function Home() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} MAY YI KO</span>
-          <a href="/cv.pdf" download>
-            DOWNLOAD CV <Download size={12} />
-          </a>
+          
         </div>
       </footer>
 
