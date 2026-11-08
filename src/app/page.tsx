@@ -28,9 +28,9 @@ import {
 
 const projects = [
   {
-   number: "01", 
-   repo: "https://github.com/panpan1234777-design/Meeting-Room-Booking-Project", 
-   image: "/images/meeting-room.png", 
+    number: "01",
+    repo: "https://github.com/panpan1234777-design/Meeting-Room-Booking-Project",
+    image: "/images/meeting-room.png",
     title: "Meeting Room Booking System",
     category: "FULL-STACK WEB APPLICATION",
     description:
@@ -46,8 +46,8 @@ const projects = [
   },
   {
     number: "02",
-     repo: "https://github.com/panpan1234777-design/Student-Management-System", 
-   image: "/images/student.png", 
+    repo: "https://github.com/panpan1234777-design/Student-Management-System",
+    image: "/images/student.png",
     title: "Student Management System",
     category: "DATA MANAGEMENT APPLICATION",
     description:
@@ -219,7 +219,9 @@ export default function Home() {
           <span className="profile-status" title="Open to opportunities" />
         </div>
         <div className="hero-copy reveal delay-1">
-          <p className="hero-kicker"><span/> HELLO, I&apos;M</p>
+          <p className="hero-kicker">
+            <span /> HELLO, I&apos;M
+          </p>
           <h1>May Yi Ko</h1>
           <h2>Web Developer</h2>
           <p className="hero-description">
@@ -252,12 +254,22 @@ export default function Home() {
             >
               <Linkedin size={23} />
             </a>
-            <a href="https://mail.google.com/mail/?view=cm&to=mayyiko202@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=mayyiko202@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Email"
+            >
               <Mail size={23} />
             </a>
-            <a href="/cv.pdf" download>
-            cv form <Download size={15} />
-          </a>
+            <a
+              href="/cv.pdf"
+              download="May_Yi_Ko_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              cv form <Download size={15} />
+            </a>
           </div>
           {/* <a className="scroll-indicator" href="#about"><span/> SCROLL TO EXPLORE <ArrowDown size={13}/></a> */}
         </div>
@@ -404,8 +416,18 @@ export default function Home() {
                       <i /> CASE STUDY
                     </span>
                   </div>
-                  {project.image && <img className="project-shot" src={project.image} alt={project.title} />}
-<div className={project.image ? "mock-window mock-hidden" : "mock-window"}>
+                  {project.image && (
+                    <img
+                      className="project-shot"
+                      src={project.image}
+                      alt={project.title}
+                    />
+                  )}
+                  <div
+                    className={
+                      project.image ? "mock-window mock-hidden" : "mock-window"
+                    }
+                  >
                     <div className="mock-sidebar">
                       <span className="mock-logo">
                         <Icon size={15} />
@@ -589,14 +611,18 @@ export default function Home() {
             >
               <Linkedin size={18} />
             </a>
-            <a href="https://mail.google.com/mail/?view=cm&to=mayyiko202@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=mayyiko202@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Email"
+            >
               <Mail size={18} />
             </a>
           </div>
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} MAY YI KO</span>
-          
         </div>
       </footer>
 
@@ -640,16 +666,16 @@ export default function Home() {
                 <span key={tech}>{tech}</span>
               ))}
             </div>
-           {projects[activeProject].repo && (
-  <a
-    className="button button-secondary modal-repo"
-    href={projects[activeProject].repo}
-    target="_blank"
-    rel="noreferrer"
-  >
-    <Github size={15} /> View on GitHub
-  </a>
-)}
+            {projects[activeProject].repo && (
+              <a
+                className="button button-secondary modal-repo"
+                href={projects[activeProject].repo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github size={15} /> View on GitHub
+              </a>
+            )}
             <button
               className="button button-primary modal-done"
               onClick={() => setActiveProject(null)}
